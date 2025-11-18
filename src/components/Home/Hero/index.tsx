@@ -22,7 +22,8 @@ const Hero = () => {
             İşini Çözelim Firmamız Olarak Tüm Sorunlarınıza Çözüm Buluyoruz.
           </h1>
           <p className='text-grey dark:text-white/70 text-xl font-semibold'>
-            A brief introduction about myself and my professional objectives.
+            Çözüm Bizim İşimiz. Profesyonel ekibimizle işinizi büyütmek ve
+            hedeflerinize ulaşmak için buradayız.
           </p>
           <a
             href='#learn-more'
