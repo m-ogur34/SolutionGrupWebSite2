@@ -47,19 +47,20 @@ const Progresswork = ({ isColorMode }: { isColorMode: Boolean }) => {
             <div className='flex gap-2 items-center'>
               <span className='w-3 h-3 rounded-full bg-success'></span>
               <span className='font-medium text-midnight_text text-sm dark:text-white/50'>
-                build everything
+                NEDEN BİZ?
               </span>
             </div>
             <h2 className='pt-9 pb-8 text-midnight_text font-bold dark:text-white text-4xl'>
-              Build amazing websites and landing pages with ease
+              Farklı Sektörlerde Tek Çözüm Ortağınız
             </h2>
-            <p className='text-gray dark:text-white/70 text-base font-semibold'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-              ipsum suspendisse ultrices gravida.
+            <p className='text-gray dark:text-white/70 text-base font-semibold mb-8'>
+              Ogur Luxury Solutions olarak, teknolojiyi ve saha operasyonlarını birleştiriyoruz. 
+              İster bir dans okulu yönetin, ister yüksek katlı bir plazanız olsun; 
+              ihtiyacınız olan dijital ve fiziksel çözümleri tek bir çatı altında sunuyoruz.
             </p>
 
-            <div className='block mx-auto pt-12'>
+            {/* Aşağıdaki İlerleme Çubukları (Progress Bars) - Dilerseniz kaldırabilirsiniz veya yetenekleriniz olarak kullanabilirsiniz */}
+            <div className='block mx-auto pt-6'>
               {progressValues.map((item, index) => (
                 <div
                   key={index}

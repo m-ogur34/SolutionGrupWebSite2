@@ -4,20 +4,21 @@ import Location from "@/components/Contact/OfficeLocation";
 import React from "react";
 import HeroSub from "@/components/SharedComponent/HeroSub";
 import { Metadata } from "next";
+
 export const metadata: Metadata = {
-    title: "Contact | Venus",
+    title: "İletişim | Ogur Luxury Solutions",
 };
 
-const page = () => {
+const ContactPage = () => {
   const breadcrumbLinks = [
-    { href: "/", text: "Home" },
-    { href: "/contact", text: "Contact" },
+    { href: "/", text: "Ana Sayfa" },
+    { href: "/contact", text: "İletişim" },
   ];
   return (
     <>
       <HeroSub
-        title="Contact Us"
-        description="Discover a wealth of insightful materials meticulously crafted to provide you with a comprehensive understanding of the latest trends."
+        title="Bize Ulaşın"
+        description="Projeleriniz için profesyonel destek almak veya hizmetlerimiz hakkında detaylı bilgi edinmek için bizimle iletişime geçin."
         breadcrumbLinks={breadcrumbLinks}
       />
       <ContactInfo />
@@ -27,4 +28,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ContactPage;

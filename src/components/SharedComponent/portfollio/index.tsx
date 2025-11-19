@@ -12,7 +12,7 @@ const Portfolio = () => {
           data-aos-duration='1000'>
           <span className='w-3 h-3 rounded-full bg-success'></span>
           <span className='font-medium text-midnight_text text-sm dark:text-white/50'>
-            Portfolio
+            Projelerimiz
           </span>
         </div>
         <h2
@@ -20,12 +20,11 @@ const Portfolio = () => {
           data-aos='fade-left'
           data-aos-delay='200'
           data-aos-duration='1000'>
-          Explore my portfolio showcase
+          Geliştirdiğimiz Yenilikçi Çözümler
         </h2>
         <div className='pb-14 inline-flex'>
-          <p className='text-base font-normal text-grey max-w-29 dark:text-white/50'>
-            Dive into a curated collection of my finest work, showcasing
-            expertise across various industries.
+          <p className='text-base font-normal text-grey max-w-2xl dark:text-white/50'>
+            Sektörel ihtiyaçlara özel olarak tasarladığımız yazılım ve hizmet projelerimizi inceleyin.
           </p>
         </div>
       </div>

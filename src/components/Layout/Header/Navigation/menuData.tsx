@@ -1,18 +1,19 @@
 import { HeaderItem } from "@/types/menu";
 
 export const headerData: HeaderItem[] = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Portfolio", href: "/portfolio" },
-  {
-    label: "Blog",
-    href: "/blog",
+  { label: "Ana Sayfa", href: "/" },
+  { label: "Hakkımızda", href: "/about" },
+  { 
+    label: "Hizmetlerimiz", 
+    href: "/services",
     submenu: [
-      { label: "Blog list", href: "/blog" },
-      { label: "Blog details", href: "/blog/Blog_1" },
-    ],
+        { label: "Dans Okulu Otomasyonu", href: "/services/dans-okulu" },
+        { label: "Muhasebe Yazılımı", href: "/services/muhasebe" },
+        { label: "Rent a Car Sistemi", href: "/services/rent-a-car" },
+        { label: "Drone ile Temizlik", href: "/services/drone-temizlik" },
+        { label: "Bina Yalıtımı", href: "/services/yalitim" },
+    ]
   },
-  { label: "Contact", href: "/contact" },
-  { label: "Documentation", href: "/documentation" },
-];  
+  { label: "Referanslar", href: "/portfolio" }, // Portfolio yerine Referanslar dedik
+  { label: "İletişim", href: "/contact" },
+];
