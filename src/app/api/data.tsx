@@ -1,73 +1,73 @@
 import { getImgPath } from "@/utils/image";
 
 export const menuItems = [
-    { name: "Ana Sayfa", href: "#home" },
-    { name: "Hakkımızda", href: "#about" },
-    { name: "Hizmetler", href: "#services" },
-    { name: "Projeler", href: "#portfolio" },
-    { name: "Referanslar", href: "#testimonials" },
-    { name: "Blog", href: "/#blog" },
+    { name: "Ana Sayfa", href: "/" }, // #home yerine / yapıldı
+    { name: "Hakkımızda", href: "/about" },
+    { name: "Hizmetler", href: "/services" },
+    { name: "Projeler", href: "/portfolio" },
+    { name: "İletişim", href: "/contact" },
 ];
 
 export const count = [
     {
         icon: getImgPath("/images/counter/bag.svg"),
-        value: "5",
+        value: "5+",
         description: "Farklı Sektörde Profesyonel Hizmet",
     },
     {
         icon: getImgPath("/images/counter/admin.svg"),
         value: "7/24",
-        description: "Kesintisiz Teknik Destek ve Müşteri Hizmetleri",
+        description: "Kesintisiz Teknik Destek",
     },
     {
         icon: getImgPath("/images/counter/star.svg"),
         value: "%100",
-        description: "Müşteri Memnuniyeti ve Kalite Odaklı Çözümler",
+        description: "Müşteri Memnuniyeti",
     },
 ];
 
 export const Progress = [
-    { title: 'Yazılım ve Otomasyon Çözümleri', Progress: 100 },
-    { title: 'Saha Operasyon ve Temizlik', Progress: 95 },
-    { title: 'Danışmanlık ve Yönetim', Progress: 90 }
+    { title: 'Yazılım ve Otomasyon', Progress: 100 },
+    { title: 'Saha Operasyonları', Progress: 95 },
+    { title: 'Danışmanlık', Progress: 90 }
 ];
 
+// Hizmetler - Slug'lar menü ile uyumlu hale getirildi
 export const Servicebox = [
     {
-        slug: 'dans-okulu',
+        slug: 'web-tasarim', // Menüdeki link ile eşleşti
         icon: getImgPath('/images/services/ux-design-product_1.svg'),
-        title: 'Dans Okulu Otomasyonu',
-        description: 'Öğrenci kayıtları, ders programları, eğitmen takibi ve ödeme süreçlerini tek bir panelden kolayca yönetin.',
-        content: 'Dans okulları için özel olarak geliştirdiğimiz bu otomasyon sistemi sayesinde, öğrenci devamsızlık takibinden eğitmen maaş hesaplamalarına, sınıf programlarından ödeme hatırlatmalarına kadar tüm süreçleri dijitalleştirebilirsiniz. Kullanıcı dostu arayüzü ile karmaşık Excel dosyalarından kurtulun ve işinize odaklanın.'
+        title: 'Web Tasarım & Yazılım',
+        description: 'Kurumsal kimliğinizi yansıtan, SEO uyumlu ve mobil dostu modern web siteleri.',
+        content: 'İşletmeniz için özel olarak tasarlanmış, hızlı, güvenli ve yönetim panelli web siteleri geliştiriyoruz. E-ticaret, kurumsal tanıtım veya özel web uygulamaları ile dijital varlığınızı güçlendirin.'
     },
     {
-        slug: 'muhasebe',
-        icon: getImgPath('/images/services/perfomance-optimization.svg'),
-        title: 'Muhasebe Yazılımı',
-        description: 'Gelir-gider takibi, faturalandırma, cari hesap yönetimi ve finansal raporlama için güvenli bulut çözümü.',
-        content: 'Küçük ve orta ölçekli işletmeler için tasarlanan bulut tabanlı muhasebe yazılımımız, finansal durumunuzu her an her yerden takip etmenizi sağlar. E-fatura entegrasyonu, otomatik banka mutabakatı ve detaylı nakit akışı raporları ile şirketinizin finansal sağlığını güvence altına alın.'
+        slug: 'dans-okulu',
+        icon: getImgPath('/images/services/ux-design-product_2.svg'),
+        title: 'Dans Okulu Otomasyonu',
+        description: 'Öğrenci kayıt, ders programı ve ödeme takibi için kapsamlı yönetim sistemi.',
+        content: 'Dans okulları için özel geliştirdiğimiz yazılım ile devamsızlık takibi, eğitmen maaş hesaplaması ve sınıf yönetimini tek panelden yapın.'
     },
     {
         slug: 'rent-a-car',
-        icon: getImgPath('/images/services/ux-design-product_2.svg'),
+        icon: getImgPath('/images/services/perfomance-optimization.svg'),
         title: 'Rent a Car Otomasyonu',
-        description: 'Araç rezervasyonları, filo takibi, bakım süreçleri ve müşteri sözleşmelerini dijital ortamda yönetin.',
-        content: 'Araç kiralama sektörüne özel çözümlerimizle filonuzu verimli yönetin. Müsaitlik takvimi, bakım/kasko hatırlatmaları, müşteri kara liste kontrolü ve sözleşme yazdırma modülleri ile operasyonel yükünüzü azaltın ve müşteri memnuniyetini artırın.'
+        description: 'Araç kiralama süreçlerinizi, rezervasyonları ve filo bakımını dijitalleştirin.',
+        content: 'Araç müsaitlik durumu, kasko takibi, müşteri kara liste kontrolü ve sözleşme yönetimi ile filonuzu verimli yönetin.'
     },
     {
         slug: 'drone-temizlik',
         icon: getImgPath('/images/services/ux-design-product_1.svg'),
         title: 'Drone ile Cephe Temizliği',
-        description: 'Yüksek katlı plazalar ve ulaşılması zor alanlar için iş güvenliği riskini sıfıra indiren teknolojik temizlik hizmeti.',
-        content: 'Geleneksel yöntemlerin (iskele, vinç) yarattığı güvenlik risklerini ve yüksek maliyetleri ortadan kaldırıyoruz. Özel donanımlı temizlik dronlarımız ile yüksek katlı binaların, cam cephelerin ve ulaşılması güç alanların temizliğini hızlı, güvenli ve etkili bir şekilde gerçekleştiriyoruz.'
+        description: 'Yüksek katlı binalar için iş güvenliği riskini sıfıra indiren teknolojik temizlik.',
+        content: 'Plazalar ve gökdelenler için iskele gerektirmeyen, hızlı ve güvenli drone destekli dış cephe temizlik hizmeti sunuyoruz.'
     },
     {
         slug: 'yalitim',
         icon: getImgPath('/images/services/perfomance-optimization.svg'),
         title: 'Bina Yalıtımı',
-        description: 'Enerji tasarrufu sağlayan, uzun ömürlü ısı ve ses yalıtımı uygulamaları ile binalarınıza değer katın.',
-        content: 'Enerji maliyetlerinin arttığı günümüzde, profesyonel yalıtım çözümleri ile tasarruf sağlayın. Isı, ses ve su yalıtımı konusunda uzman ekibimiz ve kaliteli malzeme kullanımımız ile binalarınızın ömrünü uzatıyor, yaşam konforunu artırıyoruz.'
+        description: 'Enerji tasarrufu sağlayan profesyonel ısı ve ses yalıtımı uygulamaları.',
+        content: 'Binalarınızın enerji verimliliğini artıran, uzun ömürlü mantolama ve izolasyon çözümleri.'
     },
 ];
 
@@ -75,8 +75,8 @@ export const portfolioinfo = [
     {
         image: getImgPath('/images/portfolio/cozycasa.png'),
         alt: 'Dans Okulu',
-        title: 'Dans Okulu Yönetimi',
-        slug: 'dans-okulu-yonetimi',
+        title: 'Dans Yönetim Sistemi',
+        slug: 'dans-yonetim',
         info: 'Otomasyon',
         Class: 'md:mt-0'
     },
@@ -91,25 +91,25 @@ export const portfolioinfo = [
     {
         image: getImgPath('/images/portfolio/humans.png'),
         alt: 'Rent a Car',
-        title: 'Araç Kiralama Sistemi',
-        slug: 'rent-a-car-sistemi',
+        title: 'Filo Kiralama',
+        slug: 'filo-kiralama',
         info: 'Yazılım',
         Class: 'md:mt-0'
     },
     {
         image: getImgPath('/images/portfolio/roket-squred.png'),
-        alt: 'Plaza Temizlik',
-        title: 'Drone ile Temizlik',
-        slug: 'drone-temizlik',
+        alt: 'Temizlik',
+        title: 'SkyClean Drone',
+        slug: 'skyclean-drone',
         info: 'Operasyon',
         Class: 'md:mt-24'
     },
     {
         image: getImgPath('/images/portfolio/panda-logo.png'),
         alt: 'Yalıtım',
-        title: 'Bina Yalıtım Hizmeti',
-        slug: 'bina-yalitim',
-        info: 'Hizmet',
+        title: 'Eco İzolatör',
+        slug: 'eco-izolator',
+        info: 'İnşaat',
         Class: 'md:mt-0'
     },
 ];

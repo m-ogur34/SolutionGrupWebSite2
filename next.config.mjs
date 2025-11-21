@@ -1,18 +1,17 @@
 /** @type {import('next').NextConfig} */
 
-const isProd = process.env.NODE_ENV === "production";
-const basePath = isProd ? `/venus-nextjs` : "";
-
 const nextConfig = {
   output: "export",
-  basePath,
-  assetPrefix: basePath,
+  // basePath ve assetPrefix satırlarını kaldırdık
+  // basePath: ... (SİLİNDİ)
+  // assetPrefix: ... (SİLİNDİ)
   images: {
     unoptimized: true,
   },
   trailingSlash: true,
   env: {
-    NEXT_PUBLIC_BASE_PATH: basePath,
+    // Base path'i boş bırakıyoruz
+    NEXT_PUBLIC_BASE_PATH: "",
   },
 };
 
