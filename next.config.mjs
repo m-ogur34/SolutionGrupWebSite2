@@ -3,14 +3,14 @@
 const nextConfig = {
   output: "export",
   // GitHub Pages repository adınız buraya eklenmeli
-  basePath: "/İsniCozelim",
+  basePath: "/isiniCozelim",
   images: {
     unoptimized: true,
   },
   trailingSlash: true,
   env: {
     // Resim yolları için kullanılan değişkeni de güncelliyoruz
-    NEXT_PUBLIC_BASE_PATH: "/İsniCozelim",
+    NEXT_PUBLIC_BASE_PATH: "/isiniCozelim",
   },
 };
 
