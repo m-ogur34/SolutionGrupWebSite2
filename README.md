@@ -1,47 +1,35 @@
-# Venus Free Next.js Website Template
+# İşini Çözelim Website Projesi
 
-#### Preview
+#### Önizleme
 
-- [Demo](https://themewagon.github.io/venus-nextjs/)
+- [Canlı Demo](#) (Varsa link ekleyebilirsiniz)
 
-#### Download
+#### Proje Hakkında
 
-- [Download from ThemeWagon](https://themewagon.com/themes/venus-nextjs/)
+Bu proje, "İşini Çözelim" markası için geliştirilmiş; Rent a Car, Drone Temizlik, Dans Okulu, Yalıtım ve Web Yazılım hizmetlerini tanıtan kurumsal web sitesidir.
 
-## Getting Started
+## Başlangıç
 
-1. Clone Repository
+1. Repoyu Klonlayın
 
-```
-git clone https://github.com/themewagon/venus-nextjs.git
-```
+\`\`\`bash
+git clone https://github.com/m-ogur34/SolutionGrupWebSite2.git
+\`\`\`
 
-2. Install Dependencies
+2. Bağımlılıkları Yükleyin
 
-```
-npm i
-```
+\`\`\`bash
+npm install
+\`\`\`
 
-3. Run the development server:
+3. Geliştirme Sunucusunu Başlatın:
 
-```bash
+\`\`\`bash
 npm run dev
-# or
+# veya
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+\`\`\`
 
-## Author
+## Lisans
 
-```
-Design and code is completely written by Getnextjstemplates and development team.
-```
-
-## License
-
-- Design and Code is Copyright &copy; [codescandy](https://getnextjstemplates.com/)
-- Licensed cover under [MIT]
-- Distributed by [ThemeWagon](https://themewagon.com)
+Bu proje [MIT] lisansı altındadır.
