@@ -9,20 +9,18 @@ const Logo: React.FC = () => {
             <Image
                 src={getImgPath("/images/logo/isini-cozelim-logo.png")}
                 alt="İşini Çözelim Logo"
-                width={180} // Genişlik değerini biraz düşürdük
-                height={60} // Yükseklik değerini oranladık
-                // GÜNCELLEME: 'h-32' yerine 'h-12' yapıldı.
-                className='dark:hidden w-auto h-12 object-contain'
+                width={540} // Genişlik 3 katına çıkarıldı (180 x 3)
+                height={180} // Yükseklik 3 katına çıkarıldı (60 x 3)
+                className='dark:hidden w-auto h-36 object-contain' // h-12 (48px) yerine h-36 (144px) yapıldı
             />
 
             {/* Dark Mod (Karanlık) Logosu */}
             <Image
                 src={getImgPath("/images/logo/isini-cozelim-logo-white.png")}
                 alt="İşini Çözelim Logo"
-                width={180}
-                height={60}
-                // GÜNCELLEME: 'h-32' yerine 'h-12' yapıldı.
-                className='dark:block hidden w-auto h-12 object-contain'
+                width={540} // Genişlik 3 katına çıkarıldı (180 x 3)
+                height={180} // Yükseklik 3 katına çıkarıldı (60 x 3)
+                className='dark:block hidden w-auto h-36 object-contain' // h-12 (48px) yerine h-36 (144px) yapıldı
             />
         </Link>
     );
