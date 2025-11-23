@@ -2,16 +2,15 @@
 
 const nextConfig = {
   output: "export",
-  // basePath ve assetPrefix satırlarını kaldırdık
-  // basePath: ... (SİLİNDİ)
-  // assetPrefix: ... (SİLİNDİ)
+  // GitHub Pages repository adınız buraya eklenmeli
+  basePath: "/solutiongrupwebsite2",
   images: {
     unoptimized: true,
   },
   trailingSlash: true,
   env: {
-    // Base path'i boş bırakıyoruz
-    NEXT_PUBLIC_BASE_PATH: "",
+    // Resim yolları için kullanılan değişkeni de güncelliyoruz
+    NEXT_PUBLIC_BASE_PATH: "/solutiongrupwebsite2",
   },
 };
 
