@@ -6,6 +6,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getImgPath } from "@/utils/image";
 
+// 1. Statik export için slug'ları oluşturuyoruz
 export async function generateStaticParams() {
     const portfolios = getAllPortfolios(["slug"]);
     return portfolios.map((portfolio) => ({
@@ -13,12 +14,12 @@ export async function generateStaticParams() {
     }));
 }
 
-// DEĞİŞİKLİK BURADA: params tipi Promise olarak güncellendi
-export default async function PortfolioPost({ params }: { params: Promise<{ slug: string }> }) {
+// 2. Sayfa bileşeni (Next.js 15 için async ve Promise yapısında)
+export default async function PortfolioDetail({ params }: { params: Promise<{ slug: string }> }) {
     // Params'ı await ile çözümlüyoruz
-    const resolvedParams = await params;
+    const { slug } = await params;
 
-    const portfolio = getPortfolioBySlug(resolvedParams.slug, [
+    const portfolio = getPortfolioBySlug(slug, [
         "title",
         "date",
         "slug",
@@ -37,8 +38,8 @@ export default async function PortfolioPost({ params }: { params: Promise<{ slug
 
     return (
         <>
-            {/* BlogHeader params beklediği için resolvedParams'ı gönderiyoruz */}
-            <BlogHeader params={resolvedParams} />
+            {/* BlogHeader params beklediği için slug'ı obje olarak gönderiyoruz */}
+            <BlogHeader params={{ slug }} />
             <section className="pb-20 dark:bg-darkmode">
                 <div className="container mx-auto max-w-4xl px-4">
                     {portfolio.coverImage && (
