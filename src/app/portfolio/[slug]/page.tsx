@@ -1,60 +1,59 @@
 import React from "react";
-import { getAllPosts, getPostBySlug } from "@/utils/markdown";
-import markdownToHtml from "@/utils/markdownToHtml";
-import BlogHeader from "@/components/Blog/BlogHeader";
-import Image from "next/image";
+import { portfolioinfo } from "@/app/api/data";
 import { notFound } from "next/navigation";
-import { getImgPath } from "@/utils/image";
+import Image from "next/image";
+import HeroSub from "@/components/SharedComponent/HeroSub";
 
+// 1. Statik export için slug'ları oluşturuyoruz
 export async function generateStaticParams() {
-    const posts = getAllPosts(["slug"]);
-    return posts.map((post) => ({
-        slug: post.slug,
+    return portfolioinfo.map((item) => ({
+        slug: item.slug,
     }));
 }
 
-// DEĞİŞİKLİK BURADA: params tipi Promise olarak güncellendi
-export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+// 2. Sayfa bileşeni (Next.js 15 için async ve Promise yapısında)
+export default async function PortfolioDetail({ params }: { params: Promise<{ slug: string }> }) {
     // Params'ı await ile çözümlüyoruz
-    const resolvedParams = await params;
+    const { slug } = await params;
 
-    const post = getPostBySlug(resolvedParams.slug, [
-        "title",
-        "date",
-        "slug",
-        "author",
-        "authorImage",
-        "content",
-        "coverImage",
-    ]);
+    // Slug'a göre ilgili projeyi buluyoruz
+    const item = portfolioinfo.find((p) => p.slug === slug);
 
-    if (!post.slug) {
+    if (!item) {
         notFound();
     }
 
-    const content = await markdownToHtml(post.content || "");
-
     return (
         <>
-            {/* BlogHeader params beklediği için resolvedParams'ı gönderiyoruz */}
-            <BlogHeader params={resolvedParams} />
-            <section className="pb-20 dark:bg-darkmode">
-                <div className="container mx-auto max-w-4xl px-4">
-                    {post.coverImage && (
-                        <div className="mb-10 w-full overflow-hidden rounded-lg">
-                            <Image
-                                src={getImgPath(post.coverImage)}
-                                alt={post.title || "Blog Görseli"}
-                                width={1000}
-                                height={600}
-                                className="w-full object-cover"
-                            />
-                        </div>
-                    )}
-                    <div
-                        className="blog-details prose dark:prose-invert max-w-none"
-                        dangerouslySetInnerHTML={{ __html: content }}
-                    />
+            <HeroSub
+                title={item.title}
+                description={item.info}
+                breadcrumbLinks={[
+                    { href: "/", text: "Ana Sayfa" },
+                    { href: "/portfolio", text: "Referanslar" },
+                    { href: `/portfolio/${item.slug}`, text: item.title }
+                ]}
+            />
+            <section className="py-20 dark:bg-darkmode">
+                <div className="container mx-auto max-w-6xl px-4">
+                    <div className="rounded-xl overflow-hidden mb-10 shadow-lg">
+                        <Image
+                            src={item.image}
+                            alt={item.alt}
+                            width={1200}
+                            height={600}
+                            quality={100}
+                            className="w-full object-cover h-[400px] md:h-[500px]"
+                        />
+                    </div>
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="text-3xl font-bold mb-6 text-midnight_text dark:text-white border-b border-gray-200 dark:border-gray-700 pb-4">
+                            Proje Hakkında
+                        </h2>
+                        <p className="text-lg text-grey dark:text-white/70 leading-loose text-justify">
+                            {item.detail}
+                        </p>
+                    </div>
                 </div>
             </section>
         </>
